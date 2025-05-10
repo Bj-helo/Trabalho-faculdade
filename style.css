@@ -1,96 +1,112 @@
+/*Usei a regra de fonte do css para deixar o site com a fonte de pixel*/
 @font-face {
+    /*Dei um nome a fonte para usar nos outros elementos*/
     font-family: 'Pixelfont';
-    src: url('fonts/pixel.ttf') format('truetype');
-    font-weight: normal;
+    /*Aqui indiquei onde a fonte tá*/
+    src: url('fonts/pixel.ttf');
 }
-
+/*Estilizando a tag do cabeçalho com uma cor e centralizando*/
 header {
     background-color: #ce6a97cc;
     text-align: center;
 }
-
+/*Estilizando o gif coração com a largura proporcional, e a margem ser automatico para centralizar*/
 .cora {
-  width: 80px;
-  display: block; 
-  margin: 0 auto; 
+  width: 80px; 
+  margin: auto; 
 }
-
+/*Aqui está começando a estilizar o titulo do cabeçalho*/
 header h1 {
-    font-size: 5.0rem;
+    /*Defini o tamanho da fonte*/
+    font-size: 80px;
+    /*Deleguei a cor preta*/
     color: black;
+    /*Centralizei, horizontal, o titulo*/
     text-align: center;
-    margin: 0;
-    padding: 20px;
+    /*Deixei um espaçamento de 20px na borda de baixo para não ficar perto do paragrafo*/
     margin-bottom: 20px;
 }
-
+/*Aqui estilizei o tamanho e cor dos paragrafos do cabeçalho*/
 header p {
-    font-size: 0.5rem;
+    font-size: 8px;
     color: black;
-    margin-top: 10px;
 }
-
+/*Usando o class de justificado*/
 .justificado {
+    /*Justifiquei os paragrafos e deixei o tamanho de 32px*/
     text-align: justify;
-    margin: 0;
-    font-size: 2.0rem;
-    margin-bottom: 5px; /* Espaçamento entre os parágrafos */
+    font-size: 32px;
 }
-
+/*Estilizando a tag do corpo inteiro do site*/
 body {
+    /*Adicionei um cor diferente do cabeçalho*/
     background-color: #ffadce;
-    font-family: 'Pixelfont', sans-serif;
-    margin: 0;
+    /*Referencia a fonte que será usada apenas com o nome que dei a ela na regra*/
+    font-family: 'Pixelfont';
 }
-
+/*Coloquei uma margem abaixo da lista para ter um espaçamento entre ela e as imagens*/
 .lista li {
     margin-bottom: 30px;
 }
-
+/*Class das imagens dos hobbies que estão na lista*/
 .imagem {
+    /*Deixei o display flex para o navegador entender que as imagens são flexiveis ao restante das propriedades abaixo*/
     display: flex;
+    /*Aqui alinhei no horizontal as imagens e centralizei*/
     justify-content: center;
+    /*Defini o espaçamento entre uma imagem e outra de 40px*/
     gap: 40px;
+    /*Inseri uma margem abaixo de 80px para ter espaçamento com o próximo elemento*/
     margin-bottom: 80px; 
 }
-
+/*Aqui estou centralizando os titulos de cada imagem */
 .item {
     text-align: center;
 }
-
-.item img {
-    width: 200px;
-    height: auto;
-}
-
+/*Class para deixar as bordas arredondas das imagens dos hobbies*/
 .imagem_arredondada {
+    /*Arredondei as bordas para 50px*/
     border-radius: 50px;
+    /*Deixei uma largura das imagens em 150px*/
     width: 150px;
+    /*Defini a altura para ser ajustada automaticamente a largura*/
     height: auto;
 }
-
-.texto2 {
+/*Class do titulo da tabela*/
+.tabela {
+    /*Centralizei */
     text-align: center;
-    margin-top: 40px; /* Adiciona espaçamento acima do texto */
+    /*Adicionei uma margem para não ficar tão perto da tabela*/
+    margin-bottom: 40px; 
 }
-
+/*Estilizando a tag da tabela*/
 table {
+    /*Adicionei uma cor de fundo diferente da cor do corpo do site*/
+    background-color: #ce6a97cc;
+    /*Fixa a largura das colunas*/
     table-layout: fixed;
+    /*Aqui os elementos só vão preencher 80% da largura disponível no fixado*/
     width: 80%;
-    margin: 0 auto;
-    margin-bottom: 50px;;
+    /*Aplicando a margem automatica para centralizar de forma horizontal*/
+    margin: auto;
+    /*Deixando borda unica na tabela para ficar mais apresentavel*/
     border-collapse: collapse;
+    /*Deixar verticalmente alinhado e centralizado a tabela*/
+    vertical-align: middle;
+     /*Apliquei uma margem abaixo da tabela para ter espaçamento entre ele e o prox elemento*/
+    margin-bottom: 50px;
 }
-
+/*Estilizando a tag do cabeçalho da tabela*/
 th {
     font-size: 18px;
+    /*Borda pra separar as colunas*/
     border: 2px solid #000000;
+    /*Adicionar espaçamento de 10px dentro da borda*/
     padding: 10px;
+    /*Centralizar os titulos*/
     text-align: center;
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
 }
+/*Estilizando as tags das colunas*/
 td{
     font-size: 18px;
     border: 2px solid #000000;
@@ -98,67 +114,57 @@ td{
     text-align: center;
     width: 100px;
     height: 150px;
-    vertical-align: middle;
 }
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.coluna1 {
-    background-color: #ce6a97cc;
-}
-
+/*Class para fazer com que as imagens estejam proporcionais dentro da tabela*/
 .preencher {
+    /*Preencher 100% da largura disponível*/
     width: 100%;
+    /*Preencher 100% da altura disponível*/
     height: 100%;
+    /*Deixa as imagens, mesmo com o tamnho modificado, com a mesma qualidade do original*/
     object-fit: cover;
-    display: block;
 }
-
+/*Estilizando a tag do link*/
 a {
+    /*Deixei o fundo de outra cor*/
     background-color: #ce6a97cc;
+    /*A cor do texto*/
     color: white;
-    text-decoration: none;
 }
-
+/*Dando um glow diferente para animar o link, utilizando o hover para quando o mouse pairar no link*/
 a:hover {
-    color: rgb(58, 11, 35);
-    text-decoration: underline;
+    /*Adicionei cor preta que vai substituir a cor branca quando o mouse for em cima do "clique aqui"*/
+    color: black;
 }
-
+/*Estilizando a tag do botão*/
 button {
     font-family: 'Pixelfont';
     background-color: #ce6a97cc;
+    /*Tirei a borda para ficar mais bonitinho junto ao cabeçalho*/
     border: none;
-    padding: 10px 10px;
-    font-size: 15px;
-    cursor: pointer;
+    font-size: 16px;
     border-radius: 5px;
     margin-top: 20px;
 }
-
+/*Quando o mouse pairar sobre o botão, muda de cor*/
 button:hover {
     background-color: #ffadce;
 }
-
+/*Estilizando a tag do rodape*/
 footer {
     background-color: #ce6a97cc;
     text-align: center;
+    /*Espaçamento interno*/
     padding: 10px;
-    width: 100%;
 }
-
+/*Estilizando a imagem do rodapé*/
 .rabbit {
   width: 50px;
-  height: 50px;
+  height: auto;
+  /*Deixei o gif em um bloco para ocupar sozinho a parte de baixo*/
   display: block; 
-  margin: 0 auto;
+  margin: auto;
 }
-
 
 
 
