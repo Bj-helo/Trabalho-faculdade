@@ -1,33 +1,55 @@
+<!--É tipo de documento que será exposto para o navegador-->
 <!DOCTYPE html>
+<!--Site em português-->
 <html lang="pt-br">
+    <!--Aqui são as informações da aba, elas não ficam visiveis-->
 <head>
+    <!--Reconhecimento do site com caracteres, tipo Ç-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo do site, mas ele fica invisivel-->
     <title>Trabalho</title>
+    <!--Atalho para que o html se conecte com o css, o href se usa quando tem link, 
+    indica para onde vai a tag link vai-->
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- Inicio do corpo do site-->
 <body>
+    <!--Cabeçalho do site com uma apresentação e o botão-->
     <header>
+        <!--Imagem do gif acima, src utilizada para se conectar a pasta "img", o alt para descrever 
+        a imgagem e o tributo class para configurar no css-->
         <img src="img/cora.gif" alt="Coração em gif" class="cora">
         <h1>
+            <!--Meu nome destacado logo abaixo-->
             <strong>Heloisa Helena</strong>
         </h1>
-        <p class="justificado">Olá, sou Heloisa, tenho 23 anos de idade e adoro gatos!</p>
-        <p class="justificado">Comecei os meus estudos em ADS e estou bastante animada</p> 
-        <p class="justificado">para me desenvolver e aprender mais sobre programação e tecnologia.</p>
+        <!--A bio justificada, sem precisar quebrar as linhas-->
+        <p class="justificado">Olá, sou Heloisa, tenho 23 anos de idade e adoro gatos!
+        Comecei os meus estudos em ADS e estou bastante animada
+        para me desenvolver e aprender mais sobre programação e tecnologia.</p>
+        <!--Botão abaixo da bio, onclick usado para executar a função do botão
+        no script.js-->
         <button onclick="MostrarMsg()">Clique para ver uma mensagem!</button>
     </header>
+    <!--Fim do cabeçalho-->
 
+    <!--Aqui já começa a página pós cabeçalho-->
+    <!--O <h2> para ficar proporcional ao título principal <h1>-->
     <h2>Meu hobbies favoritos</h2>
+    <!--Lista que foi solicitada, class adicionei para organizar no css a lista-->
     <ul class="lista">
+        <!--O <li> utilizado para colocar os itens dentro da lista-->
         <li>Desenhar Mangá</li>
         <li>Estudar programação</li>
         <li>Ler livros</li>
     </ul>
 
+    <!--O div para ajudar a organizar os códigos em um local só, class imagem para ser estilizado no css todas as imagens-->
     <div class="imagem">
+        <!--Class item para modificar no css cada item-->
         <div class="item">
             <h4>Desenhar mangá</h4>
+            <!--Inseri o style direto no html pois não consegui uma organização mais direta no css. Class para arredondar as bordas-->
             <img src="img/desenhar.gif" alt="Desenhar Mangá" style="width: 350px; height: 200px;" class="imagem_arredondada">
         </div>
         <div class="item">
@@ -40,37 +62,52 @@
         </div>
     </div>
 
-    <h2 class="texto2">Países que eu quero visitar</h2>
+    <!--Adicionando outro título agora para a tabela-->
+    <h2 class="tabela">Países que eu quero visitar</h2>
+    <!--Aberto o código para a tabela-->
     <table>
+        <!--Adiciona a thead para a tabela ter cabeçalho-->
         <thead>
+            <!--Primeira tr, indica a primeira linha-->
             <tr>
-                <th class="coluna1">País</th>
-                <th class="coluna1">Imagem</th>
+                <!--th para inserção da celúla-->
+                <th>País</th>
+                <th>Imagem</th>
             </tr>
         </thead>
+        <!--Aqui é o corpo da tabela-->
         <tbody>
+            <!--tr abertas e fechadas para colocar em linhas diferentes-->
             <tr>
-                <td class="coluna1">Suiça</td>
+                <!--Cada td para que o nome fique em uma coluna e a imagem na outra coluna, adicionei
+                o class para estilizar no css o preenchimento da imagem na celúla-->
+                <td>Suiça</td>
                 <td><img src="img/suica.gif" alt="Suiça" class="preencher"></td>
             </tr>  
             <tr>
-                <td class="coluna1">Japão</td>
+                <td>Japão</td>
                 <td><img src="img/japao.gif" alt="Japão" class="preencher"></td>
             </tr>
             <tr>
-                <td class="coluna1">Russia</td>
+                <td>Russia</td>
                 <td><img src="img/russia.gif" alt="Russia" class="preencher"></td>
             </tr>
         </tbody>
     </table>
 
+    <!--Coloquei um título menor-->
     <h3>Acesse o link</h3>
-    <a href="https://www.twitch.tv/" target="_blank">Clique aqui</a>
+    <!--A tag a para link e o atributo href para indicar que o link vai para twitch-->
+    <a href="https://www.twitch.tv/">Clique aqui</a>
 
+    <!--Aqui adicionei o rodapé para ficar mais apresentavel-->
     <footer>
+        <!--Coloquei um paragrafo e um gif com class para estilizar o gif-->
         <p>Bye Bye!<img src="img/Rabbit (2).gif" class="rabbit"></p>
     </footer>
 
+    <!--Linkar o html com o script.js-->
     <script src="script.js"></script>
+
 </body>
 </html>
